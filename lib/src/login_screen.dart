@@ -11,9 +11,10 @@ class MFELoginScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Open route'),
+          child: const Text('Back to the app with data'),
           onPressed: () {
             // Navigate to second route when tapped.
+            Navigator.pop(context, 'xxx');
           },
         ),
       ),
