@@ -71,8 +71,22 @@ class _MFELoginScreenState extends State<MFELoginScreen> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    // Navigate to second route when tapped.
-                    Navigator.pop(context, '123');
+                    if (textEditingControllerEmail.text == '') {
+                      WidgetUtil()
+                          .showToast(context, 'Please enter email address');
+                    } else if (textEditingControllerPassword.text == '') {
+                      WidgetUtil().showToast(context, 'Please enter password');
+                    } else {
+                      if (textEditingControllerEmail.text ==
+                              'kiranl@gmail.com' ||
+                          textEditingControllerPassword.text == 'kiran123') {
+                        // Navigate to second route when tapped.
+                        Navigator.pop(context, '123');
+                      } else {
+                        WidgetUtil().showToast(context,
+                            'Email address Or Password is incorrect! Please Try again!');
+                      }
+                    }
                   },
                 ),
               ),
