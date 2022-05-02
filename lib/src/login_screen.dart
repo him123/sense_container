@@ -74,6 +74,8 @@ class _MFELoginScreenState extends State<MFELoginScreen> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
+                    FocusScope.of(context).requestFocus(FocusNode());
+
                     if (textEditingControllerEmail.text == '') {
                       WidgetUtil()
                           .showToast(context, 'Please enter email address');
