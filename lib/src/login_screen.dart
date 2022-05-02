@@ -49,7 +49,7 @@ class _MFELoginScreenState extends State<MFELoginScreen> {
               TextField(
                 autofocus: false,
                 controller: textEditingControllerPassword,
-                keyboardType: TextInputType.text,
+                keyboardType: TextInputType.visiblePassword,
                 textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   focusedBorder: const OutlineInputBorder(
