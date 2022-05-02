@@ -51,6 +51,9 @@ class _MFELoginScreenState extends State<MFELoginScreen> {
                 controller: textEditingControllerPassword,
                 keyboardType: TextInputType.visiblePassword,
                 textInputAction: TextInputAction.next,
+                obscureText: true,
+                enableSuggestions: false,
+                autocorrect: false,
                 decoration: InputDecoration(
                   focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Color(0xFF61AE21))),
